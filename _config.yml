@@ -1,0 +1,11 @@
+remote_theme: anydigital/blades@v0.27.0-alpha.6
+plugins:
+  - jekyll-remote-theme
+# theme: blades
+
+layouts_dir: _includes # 11ty parity
+
+markdown: CommonMarkGhPages
+commonmark:
+  options: ["UNSAFE", "SMART", "FOOTNOTES"]
+  extensions: ["strikethrough", "autolink", "table", "tagfilter"]

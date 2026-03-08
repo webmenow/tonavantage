@@ -1,0 +1,19 @@
+title: Bladeswitch
+description: The only starter compatible with BOTH Jekyll and Eleventy at the same time 🥷
+# @TODO: add to tricks-wiki
+favicon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥷</text></svg>"
+styles:
+  - https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css
+  - https://cdn.jsdelivr.net/npm/prismjs@1/plugins/treeview/prism-treeview.min.css
+  - /assets/blades.css
+  - /assets/blades.theme.css
+scripts:
+  - https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-core.min.js
+  - https://cdn.jsdelivr.net/npm/prismjs@1/plugins/treeview/prism-treeview.min.js
+footer: |-
+  Powered by [11ty](https://github.com/11ty/eleventy)
+  × [Jekyll](https://github.com/jekyll/jekyll)
+  × [*Any*digital](https://any.digital/)
+  © 2026
+
+  [![GitHub Repo stars](https://img.shields.io/github/stars/anydigital/bladeswitch?label=🥷&logo=%20)](https://github.com/anydigital/bladeswitch)
