@@ -7,4 +7,4 @@ permalink: /
 
 Your code Your power Your style
 
-[Все посты →](/posts/)
+[Read All →](/posts/)
