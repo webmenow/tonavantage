@@ -10,20 +10,6 @@ media_folder: assets/images
 public_folder: /assets/images
 
 collections:
-  - name: pages
-    label: Страницы
-    label_singular: Страница
-    folder: pages
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: Заголовок, name: title, widget: string }
-      - { label: Описание, name: description, widget: string, required: false }
-      - { label: Контент, name: body, widget: markdown }
-      - label: Изображение
-        name: image
-        widget: image
-        required: false
 
   - name: posts
     label: Посты
@@ -34,8 +20,47 @@ collections:
     fields:
       - { label: Заголовок, name: title, widget: string }
       - { label: Дата, name: date, widget: datetime }
-      - { label: Контент, name: body, widget: markdown }
-      - label: Изображение
-        name: image
+      - { label: Автор, name: author, widget: string, required: false }
+      - label: Обложка
+        name: cover
         widget: image
         required: false
+      - label: YouTube
+        name: youtube
+        widget: string
+        required: false
+        hint: "Вставь ID видео с YouTube, например: dQw4w9WgXcQ"
+      - { label: Контент, name: body, widget: markdown }
+
+  - name: gallery
+    label: Галерея
+    label_singular: Фото
+    folder: _gallery
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Подпись, name: title, widget: string }
+      - { label: Фото, name: image, widget: image }
+      - { label: Дата, name: date, widget: datetime, required: false }
+
+  - name: pages
+    label: Страницы
+    files:
+      - label: Главная
+        name: index
+        file: index.md
+        fields:
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Контент, name: body, widget: markdown }
+      - label: О проекте
+        name: about
+        file: about.md
+        fields:
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Контент, name: body, widget: markdown }
+      - label: Контакты
+        name: contacts
+        file: contacts.md
+        fields:
+          - { label: Заголовок, name: title, widget: string }
+          - { label: Контент, name: body, widget: markdown }
