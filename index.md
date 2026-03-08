@@ -3,7 +3,7 @@ title: TON AVANTAGE
 permalink: /
 ---
 
-# Tonavantage
+# TON AVANTAGE
 
 Your code Your power Your style
 
