@@ -2,8 +2,9 @@
 
 backend:
   name: github
-  repo: YOUR_USER/REPO # @TODO: replace with your own repo!
+  repo: webmenow/tonavantage
   branch: main
+  base_url: https://sveltia-cms-auth.sergei-shevchenko.workers.dev/
 
 media_folder: /media
 # public_folder: /media
