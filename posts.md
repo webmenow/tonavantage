@@ -1,5 +1,5 @@
 ---
-title: Посты
+title: Just read it
 layout: default
 permalink: /posts/
 ---
