@@ -1,20 +1,19 @@
-# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
-
 backend:
   name: github
-  repo: webmenow/tonavantage
+  repo: sergei-shevchenko/tonavantage
   branch: main
-  base_url: https://sveltia-cms-auth.sergei-shevchenko.workers.dev/
+  base_url: https://sveltia-cms-auth.sergei-shevchenko.workers.dev
 
-media_folder: /media
-# public_folder: /media
+media_folder: assets/images
+public_folder: /assets/images
 
 collections:
-  - name: content
-    label: Content
-    folder: /
-    fields:
-      - { label: Title, name: title, widget: string }
-      - { label: Body, name: body, widget: richtext }
-
-# https://sveltiacms.app/en/docs/start#manual-installation
+  - name: pages
+    label: Pages
+    files:
+      - label: Home
+        name: index
+        file: index.md
+        fields:
+          - { label: Title, name: title, widget: text }
+          - { label: Body, name: body, widget: markdown }
