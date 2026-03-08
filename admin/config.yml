@@ -1,6 +1,8 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
 backend:
   name: github
-  repo: sergei-shevchenko/tonavantage
+  repo: webmenow/tonavantage
   branch: main
   base_url: https://sveltia-cms-auth.sergei-shevchenko.workers.dev
 
@@ -9,11 +11,31 @@ public_folder: /assets/images
 
 collections:
   - name: pages
-    label: Pages
-    files:
-      - label: Home
-        name: index
-        file: index.md
-        fields:
-          - { label: Title, name: title, widget: text }
-          - { label: Body, name: body, widget: markdown }
+    label: Страницы
+    label_singular: Страница
+    folder: pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Описание, name: description, widget: string, required: false }
+      - { label: Контент, name: body, widget: markdown }
+      - label: Изображение
+        name: image
+        widget: image
+        required: false
+
+  - name: posts
+    label: Посты
+    label_singular: Пост
+    folder: _posts
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Заголовок, name: title, widget: string }
+      - { label: Дата, name: date, widget: datetime }
+      - { label: Контент, name: body, widget: markdown }
+      - label: Изображение
+        name: image
+        widget: image
+        required: false
