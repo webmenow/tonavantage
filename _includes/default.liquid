@@ -1,16 +1,10 @@
 {% if site.data.site %}{% assign site = site.data.site %}{% endif %}
-
-{% capture content_for_header %}
-  <link rel="canonical" href="https://bladeswitch.com/">
-{% endcapture %}
-
 {% capture body %}
-  <main class="container breakout-all"><br><br>
+  <main class="container">
     {{ content }}
     <footer style="text-align: center"><hr>
-      <small>{{ site.footer | markdownify }}</small>
+      <small>{{ site.footer }}</small>
     </footer>
   </main>
 {% endcapture %}
-
 {% include blades/html.liquid %}
